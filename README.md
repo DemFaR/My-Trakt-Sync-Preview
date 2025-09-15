@@ -52,7 +52,7 @@ When using the addon, you can inspect these client-side files in your browser's 
 
 ## 🐛 Reporting Issues
 
-Found a bug or have a feature request? Please [create an issue](https://github.com/DemFaR/my-trakt-sync-addon-preview/issues) with:
+Found a bug or have a feature request? Please [create an issue](https://github.com/DemFaR/My-Trakt-Sync-Preview/issues) with:
 
 - Browser and OS information
 - Steps to reproduce
