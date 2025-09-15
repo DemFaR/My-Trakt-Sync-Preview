@@ -45,7 +45,7 @@ When using the addon, you can inspect these client-side files in your browser's 
 
 ## 🚀 Getting Started
 
-1. Install the addon from the Stremio addon catalog
+1. Install the addon from https://mytrakt.elfhosted.com
 2. Configure your Trakt account
 3. Browse personalized catalogs
 4. Use the search functionality
