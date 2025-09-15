@@ -1,0 +1,72 @@
+{
+  "id": "com.stremio.trakt.preview",
+  "version": "1.0.0",
+  "name": "Trakt Preview",
+  "description": "Preview version of the Trakt addon for Stremio - Shows client-side code structure",
+  "logo": "https://via.placeholder.com/256x256/3b82f6/ffffff?text=Trakt+Demo",
+  "background": "https://via.placeholder.com/1280x720/1f2937/60a5fa?text=Stremio+Trakt+Addon+Demo",
+
+  "types": ["movie", "series"],
+
+  "catalogs": [
+    {
+      "type": "movie",
+      "id": "trakt-watchlist-preview",
+      "name": "Trakt Watchlist (Preview)",
+      "extra": [
+        {"name": "skip", "isRequired": false}
+      ]
+    },
+    {
+      "type": "series",
+      "id": "trakt-watchlist-series-preview",
+      "name": "Trakt Watchlist Series (Preview)",
+      "extra": [
+        {"name": "skip", "isRequired": false}
+      ]
+    }
+  ],
+
+  "resources": [
+    "catalog",
+    "meta",
+    "stream",
+    "subtitles"
+  ],
+
+  "idPrefixes": ["tt", "kitsu"],
+
+  "behaviorHints": {
+    "configurable": true,
+    "configurationRequired": false
+  },
+
+  "config": [
+    {
+      "key": "authToken",
+      "type": "text",
+      "title": "Trakt Auth Token",
+      "required": false
+    },
+    {
+      "key": "defaultSort",
+      "type": "select",
+      "title": "Default Sort",
+      "options": [
+        {"value": "rank", "label": "Rank"},
+        {"value": "title", "label": "Title"},
+        {"value": "year", "label": "Year"},
+        {"value": "rating", "label": "Rating"}
+      ],
+      "default": "rank",
+      "required": false
+    },
+    {
+      "key": "itemsPerPage",
+      "type": "number",
+      "title": "Items Per Page",
+      "default": 50,
+      "required": false
+    }
+  ]
+}

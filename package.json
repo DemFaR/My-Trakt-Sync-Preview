@@ -1,0 +1,36 @@
+{
+  "name": "my-trakt-sync-addon-preview",
+  "version": "1.0.0",
+  "description": "Preview repository for Stremio Trakt Addon - Client-side code examples",
+  "main": "demo.js",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "dev": "python3 -m http.server 3000"
+  },
+  "keywords": [
+    "stremio",
+    "addon",
+    "trakt",
+    "demo",
+    "javascript"
+  ],
+  "author": "Stremio Trakt Addon Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DemFaR/my-trakt-sync-addon-preview.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DemFaR/my-trakt-sync-addon-preview/issues"
+  },
+  "homepage": "https://github.com/DemFaR/my-trakt-sync-addon-preview#readme",
+  "dependencies": {},
+  "devDependencies": {},
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "not ie <= 11"
+  ]
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stremio Trakt Addon - Preview</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🎬 Stremio Trakt Addon</h1>
+            <p>Preview of personalized catalogs powered by your Trakt watch history</p>
+        </header>
+
+        <div class="grid">
+            <div class="card">
+                <h3>🔐 Authentication</h3>
+                <p>Connect your Trakt account to access personalized catalogs and watch history.</p>
+                <div id="auth-status">
+                    <span class="status-indicator offline"></span>
+                    Not authenticated
+                </div>
+                <button class="btn" id="auth-btn">Connect Trakt Account</button>
+            </div>
+
+            <div class="card">
+                <h3>📋 Catalog Browser</h3>
+                <p>Browse movies and shows from your Trakt watchlist, favorites, and custom lists.</p>
+                <div class="code-block">
+                    <code>// Example catalog request
+const catalog = await fetch('/addon/catalog/watchlist/movies');
+const data = await catalog.json();</code>
+                </div>
+                <button class="btn secondary" id="catalog-btn">Load Sample Catalog</button>
+            </div>
+
+            <div class="card">
+                <h3>🔍 Search Integration</h3>
+                <p>Search across multiple providers including Trakt, TMDB, and OMDB.</p>
+                <input type="text" id="search-input" placeholder="Search movies, shows..." style="width: 100%; padding: 8px; margin-bottom: 12px; border-radius: 4px; border: 1px solid #374151; background: #1f2937; color: #f9fafb;">
+                <button class="btn" id="search-btn">Search</button>
+                <div id="search-results" class="search-results" style="display: none;"></div>
+            </div>
+
+            <div class="card">
+                <h3>⚙️ Settings</h3>
+                <p>Customize your addon experience with various settings and preferences.</p>
+                <div class="settings-grid">
+                    <div class="setting-item">
+                        <label>Enable Caching</label>
+                        <div class="toggle active" id="cache-toggle"></div>
+                    </div>
+                    <div class="setting-item">
+                        <label>Show Adult Content</label>
+                        <div class="toggle" id="adult-toggle"></div>
+                    </div>
+                    <div class="setting-item">
+                        <label>Analytics</label>
+                        <div class="toggle" id="analytics-toggle"></div>
+                    </div>
+                </div>
+                <button class="btn secondary" id="settings-btn">View All Settings</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>🔧 Developer Tools</h3>
+            <p>This preview shows the client-side code that runs in your browser. Open developer tools to inspect:</p>
+            <ul style="margin: 16px 0; padding-left: 20px;">
+                <li><strong>Network tab:</strong> API calls to Trakt and metadata providers</li>
+                <li><strong>Console tab:</strong> Debug logs and addon status messages</li>
+                <li><strong>Sources tab:</strong> Client-side JavaScript files</li>
+                <li><strong>Application tab:</strong> Local storage and session data</li>
+            </ul>
+            <div class="code-block">
+                <code>// Check addon status in console
+console.log('Addon version:', window.addonVersion);
+console.log('Auth status:', window.authManager?.authenticated);
+console.log('Settings:', window.settingsManager?.settings);</code>
+            </div>
+        </div>
+    </div>
+
+    <script src="client/auth.js"></script>
+    <script src="client/catalog.js"></script>
+    <script src="client/search.js"></script>
+    <script src="client/settings.js"></script>
+    <script src="demo.js"></script>
+</body>
+</html>
