@@ -1,4 +1,4 @@
-# Stremio Trakt Addon - Preview
+# MyTrakt Sync Addon - Preview
 
 This is a **preview repository** showing the client-side code structure of the Stremio Trakt Addon. This preview allows users to:
 
